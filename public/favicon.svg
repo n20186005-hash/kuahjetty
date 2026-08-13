@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jeti Kuah">
+  <rect width="64" height="64" rx="18" fill="#073b4c"/>
+  <path d="M15 37c8-5 17-5 26 0 4 2 7 3 11 2" fill="none" stroke="#f4e9d8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M24 43h17l-3 8H27z" fill="#f4e9d8"/>
+  <path d="M18 23c7-6 13-9 20-10-3 4-5 8-6 12 5-4 10-6 15-7-4 6-9 10-16 13-5-2-9-4-13-8z" fill="#d88a45"/>
+</svg>

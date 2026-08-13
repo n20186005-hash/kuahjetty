@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 104" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Jeti Kuah</title>
+  <desc id="logoDesc">Simbol sayap helang, feri dan ombak Langkawi.</desc>
+  <g transform="translate(8 8)">
+    <rect width="88" height="88" rx="24" fill="#073b4c"/>
+    <path d="M19 51c11-7 23-7 36 0 6 3 10 4 16 3" fill="none" stroke="#f4e9d8" stroke-width="7" stroke-linecap="round"/>
+    <path d="M33 60h24l-4 11H37z" fill="#f4e9d8"/>
+    <path d="M23 32c9-8 18-12 27-14-4 5-7 11-8 16 7-5 14-8 21-9-6 8-13 14-23 18-7-3-12-6-17-11z" fill="#d88a45"/>
+  </g>
+  <g fill="#073b4c">
+    <text x="118" y="52" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="800" letter-spacing="1">JETI KUAH</text>
+    <text x="120" y="76" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="3">GERBANG LAUT LANGKAWI</text>
+  </g>
+</svg>
