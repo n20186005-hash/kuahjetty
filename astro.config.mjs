@@ -2,10 +2,11 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
-// Isi domain produksi pada `site` di bawah sahaja selepas domain dipilih.
-// Biarkan undefined sebelum itu; binaan kekal sah dan sitemap tidak dijana.
+// Domain produksi. `site` diperlukan untuk canonical, OG absolute URL dan sitemap.
+const SITE = 'https://kuahjetty.com';
+
 const config = {
-  site: undefined,
+  site: SITE,
   output: 'static',
   integrations: [],
   vite: {

@@ -38,6 +38,26 @@ Sebelum domain ditetapkan, `site` kekal `undefined`. Dalam keadaan ini:
 
 Selepas domain sebenar diisi pada medan `site`, bina semula. `@astrojs/sitemap` akan menjana sitemap secara automatik berdasarkan nilai tersebut.
 
+## Pelencongan (redirect)
+
+`public/_redirects` diterbitkan bersama aset statik dan mengandungi:
+
+- `https://www.kuahjetty.com/*` → `https://kuahjetty.com/:splat` (301)
+- `http://www.kuahjetty.com/*` → `https://kuahjetty.com/:splat` (301)
+- `http://kuahjetty.com/*` → `https://kuahjetty.com/:splat` (301)
+
+Supaya pelencongan www ini berfungsi, `www.kuahjetty.com` perlu ditambah sebagai custom domain / route kepada Worker yang sama. HSTS dihantar melalui `public/_headers`; jika mahu, hidupkan juga "Always Use HTTPS" di papan pemuka Cloudflare.
+
+## Penyerahan ke Google Search Console
+
+Selepas penggunaan (deploy), hantar `https://kuahjetty.com/sitemap-index.xml` di GSC dan minta pengindeksan untuk ketiga-tiga halaman:
+
+- `https://kuahjetty.com/` (Bahasa Melayu)
+- `https://kuahjetty.com/en/` (English)
+- `https://kuahjetty.com/zh/` (中文)
+
+Setiap halaman mengeluarkan `<link rel="canonical">` sendiri serta pasangan `hreflang` (termasuk `x-default`).
+
 ## Cloudflare Workers
 
 Konfigurasi `wrangler.jsonc` menggunakan Workers Static Assets dan menunjuk ke `./dist`.

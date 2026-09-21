@@ -1,5 +1,29 @@
+# ===== 依赖 =====
 node_modules/
+.pnpm-store/
+
+# ===== Astro 构建产物（部署由 CI/build 重新生成） =====
 dist/
 .astro/
+
+# ===== 安装 / 构建日志 =====
+install.log
+install.err
+install2.log
+
+# ===== Cloudflare Wrangler 本地状态 =====
 .wrangler/
+.dev.vars
+.env
+.env.*
+!.env.example
+
+# ===== 编辑器 / OS =====
+.vscode/
+.idea/
 .DS_Store
+Thumbs.db
+
+# ===== 预览 / 临时校验产物 =====
+dist-static/
+.wrangler-out/

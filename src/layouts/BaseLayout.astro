@@ -1,0 +1,166 @@
+---
+import '../styles/global.css';
+import { SITE, copy, localeMeta, locales, type Locale } from '../data/content';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = copy[locale];
+const meta = localeMeta[locale];
+const canonicalUrl = SITE + meta.path;
+const ogImage = SITE + '/images/kuah-waterfront.webp';
+
+const attractionSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['TouristAttraction', 'LocalBusiness'],
+  name: 'Jeti Kuah (Kuah Jetty)',
+  alternateName: 'Kuah Jetty · 瓜鎮碼頭',
+  description:
+    'Terminal feri utama di Kuah dan salah satu gerbang laut ke Pulau Langkawi, Kedah.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Straits Court Comdominium, Kuah',
+    addressLocality: 'Langkawi',
+    postalCode: '07000',
+    addressRegion: 'Kedah',
+    addressCountry: 'MY',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 6.3060687,
+    longitude: 99.85149,
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '08:00',
+      closes: '18:00',
+    },
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: 4.3,
+    ratingCount: 8370,
+    bestRating: 5,
+  },
+  url: canonicalUrl,
+  inLanguage: meta.htmlLang,
+  image: [SITE + '/images/kuah-waterfront.webp', SITE + '/images/kuah-jetty.webp'],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  inLanguage: meta.htmlLang,
+  mainEntity: t.faq.items.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+};
+---
+<!doctype html>
+<html lang={meta.htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#073b4c" />
+    <meta name="description" content={t.meta.description} />
+    <title>{t.meta.title}</title>
+
+    <link rel="canonical" href={canonicalUrl} />
+    {locales.map((code) => (
+      <link rel="alternate" hreflang={localeMeta[code].htmlLang} href={SITE + localeMeta[code].path} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={SITE + '/'} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={meta.ogLocale} />
+    {locales
+      .filter((code) => code !== locale)
+      .map((code) => (
+        <meta property="og:locale:alternate" content={localeMeta[code].ogLocale} />
+      ))}
+    <meta property="og:title" content={t.meta.ogTitle} />
+    <meta property="og:description" content={t.meta.ogDescription} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={t.meta.twitterTitle} />
+    <meta name="twitter:description" content={t.meta.twitterDescription} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HXM22WWPKP"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HXM22WWPKP');
+    </script>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(attractionSchema)}></script>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#kandungan">{t.header.skipLink}</a>
+
+    <header class="absolute inset-x-0 top-0 z-30">
+      <div class="shell flex items-center justify-between gap-3 py-5">
+        <a href="#atas" aria-label={t.header.logoAlt} class="inline-flex shrink-0 rounded-2xl bg-white/95 p-2 shadow-lg shadow-black/10 backdrop-blur">
+          <img src="/logo.svg" width="210" height="52" alt={t.header.logoAlt} />
+        </a>
+        <nav aria-label={t.header.navLabel} class="hidden items-center gap-1 rounded-full border border-white/20 bg-[#052f3c]/70 p-1 text-sm font-bold text-white backdrop-blur md:flex">
+          {t.header.nav.map((item) => (
+            <a class="rounded-full px-4 py-2 hover:bg-white/10" href={item.href}>{item.label}</a>
+          ))}
+        </nav>
+        <nav aria-label={t.header.langLabel} class="flex items-center gap-0.5 rounded-full border border-white/20 bg-[#052f3c]/70 p-1 text-xs font-black text-white backdrop-blur sm:text-sm">
+          {locales.map((code) => (
+            <a
+              href={localeMeta[code].path}
+              aria-current={code === locale ? 'page' : undefined}
+              class:list={[
+                'rounded-full px-3 py-2 transition',
+                code === locale ? 'bg-[#d88a45] text-white' : 'text-white/75 hover:bg-white/10 hover:text-white',
+              ]}
+            >
+              {localeMeta[code].shortLabel}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main id="kandungan">
+      <slot />
+    </main>
+
+    <footer class="bg-[#042a36] py-12 text-white">
+      <div class="shell grid gap-8 md:grid-cols-[1fr_1.4fr] md:items-end">
+        <div>
+          <img src="/logo.svg" width="210" height="52" alt={t.footer.logoAlt} class="rounded-xl bg-white p-1.5" />
+          <p class="mt-5 max-w-md text-sm leading-6 text-white/60">{t.footer.about}</p>
+        </div>
+        <div class="text-xs leading-6 text-white/50 md:text-right">
+          <p>{t.footer.credits}</p>
+          <p class="mt-2">{t.footer.ratingNote}</p>
+          <p class="mt-2">
+            {locales.map((code) => (
+              <a class="mr-3 underline decoration-white/30 hover:text-white" href={localeMeta[code].path} hreflang={localeMeta[code].htmlLang}>{localeMeta[code].label}</a>
+            ))}
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
