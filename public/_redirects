@@ -1,6 +1,1 @@
-# Satukan www ke domain utama (elak kandungan pendua & pecahan isyarat)
-https://www.kuahjetty.com/*  https://kuahjetty.com/:splat  301
-http://www.kuahjetty.com/*   https://kuahjetty.com/:splat  301
-
-# Paksa HTTPS
-http://kuahjetty.com/*       https://kuahjetty.com/:splat  301
+# Domain and protocol canonicalization is handled by src/worker.js.

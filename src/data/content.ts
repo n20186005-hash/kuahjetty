@@ -14,14 +14,14 @@ export const localeMeta: Record<
 
 const ms = {
   meta: {
-    title: 'Jeti Kuah Langkawi — Panduan Pelancongan',
+    title: "Jeti Kuah Langkawi: Feri, Tiket, Daftar Masuk & Peta",
     description:
-      'Panduan lengkap Jeti Kuah Langkawi: jadual feri ke Kuala Perlis & Kuala Kedah, harga tiket, parkir, serta tarikan & makanan berdekatan Dataran Lang.',
-    ogTitle: 'Jeti Kuah Langkawi — Panduan Pelancongan',
+      "Panduan Jeti Kuah Langkawi: semak feri Kuala Perlis/Kuala Kedah, tiket, daftar masuk 60 minit awal, parkir dan peta. Bezakan Kuah daripada Telaga Terminal.",
+    ogTitle: "Jeti Kuah Langkawi: Feri, Tiket, Daftar Masuk & Peta",
     ogDescription:
-      'Panduan praktikal Jeti Kuah: jadual feri, tambang, parkir, makan dan tarikan sekitar gerbang laut Kuah.',
-    twitterTitle: 'Jeti Kuah Langkawi — Panduan Pelancongan',
-    twitterDescription: 'Jadual feri, tiket, parkir, makan dan tarikan sekitar Jeti Kuah.',
+      "Panduan Jeti Kuah Langkawi: semak feri Kuala Perlis/Kuala Kedah, tiket, daftar masuk 60 minit awal, parkir dan peta. Bezakan Kuah daripada Telaga Terminal.",
+    twitterTitle: "Jeti Kuah Langkawi: Feri, Tiket, Daftar Masuk & Peta",
+    twitterDescription: "Panduan Jeti Kuah Langkawi: semak feri Kuala Perlis/Kuala Kedah, tiket, daftar masuk 60 minit awal, parkir dan peta. Bezakan Kuah daripada Telaga Terminal.",
   },
   header: {
     skipLink: 'Lompat ke kandungan',
@@ -29,7 +29,10 @@ const ms = {
     navLabel: 'Navigasi utama',
     langLabel: 'Pilih bahasa',
     nav: [
-      { href: '#panduan', label: 'Panduan' },
+      {
+  "href": "#feri",
+  "label": "Feri & tiket"
+},
       { href: '#makan', label: 'Makan' },
       { href: '#sekitar', label: 'Sekitar' },
       { href: '#faq', label: 'FAQ' },
@@ -37,16 +40,16 @@ const ms = {
   },
   hero: {
     eyebrow: 'Gerbang laut Langkawi',
-    h1a: 'Jeti',
-    h1b: 'Kuah.',
+    h1a: "Jeti Kuah",
+    h1b: "Langkawi.",
     lead: 'Tempat feri, bandar dan ikon Langkawi bertemu — titik mula yang praktikal untuk tiba, berlepas atau menikmati waterfront Kuah sebelum meneruskan perjalanan.',
     imageAlt: 'Pemandangan waterfront Kuah dengan jeti dan laut Langkawi',
-    ctaPrimary: 'Lihat peta',
+    ctaPrimary: "Rancang perjalanan feri",
     ctaSecondary: 'Buka Google Maps ↗',
   },
   stats: [
-    { label: 'Penilaian rujukan', value: '4.3 / 5', note: 'Google Maps · boleh berubah' },
-    { label: 'Waktu rujukan', value: '08:00–18:00', note: 'Setiap hari · semak jadual feri' },
+    { label: 'Penilaian rujukan', value: '4.3 / 5', note: "Google Maps · 8,501 ulasan · 2026-10-19" },
+    { label: 'Waktu rujukan', value: '08:00–18:00', note: "Penyenaraian peta · bukan jadual feri" },
     { label: 'Masuk kawasan awam', value: 'Percuma', note: 'Tiket diperlukan untuk perjalanan feri' },
     { label: 'Lokasi', value: 'Kuah, Langkawi', note: '07000 Langkawi, Kedah, Malaysia' },
   ],
@@ -58,7 +61,7 @@ const ms = {
     wideCard: {
       kicker: 'Jika menaiki feri',
       title: 'Tiba sekurang-kurangnya 60 minit awal.',
-      text: 'Berikan ruang untuk daftar masuk, pemeriksaan, mencari pintu berlepas dan pergerakan penumpang. Pada hujung minggu atau cuti, datang lebih awal ialah pilihan lebih selesa.',
+      text: "Langkawi Ferry Line meminta penumpang berada di terminal sekurang-kurangnya 60 minit sebelum berlepas. Datang lebih awal jika perlu pemeriksaan atau pada hari sibuk; ikut arahan tiket anda.",
       badge: '60',
     },
     cards: [
@@ -111,7 +114,7 @@ const ms = {
     intro:
       'Jeti terletak bersebelahan kawasan waterfront, Jetty Point dan mercu tanda Dataran Lang — mudah dijadikan satu kelompok persinggahan.',
     addressLabel: 'Alamat',
-    address: 'Straits Court Condominium, Kuah, 07000 Langkawi, Kedah, Malaysia',
+    address: "Kompleks Jetty Point, Kuah, 07000 Langkawi, Kedah, Malaysia",
     mapTitle: 'Peta Jeti Kuah, Langkawi',
   },
   food: {
@@ -192,7 +195,7 @@ const ms = {
       },
       {
         q: 'Berapa awal perlu tiba sebelum feri berlepas?',
-        a: 'Sebagai panduan selamat, tiba sekurang-kurangnya 60 minit sebelum waktu berlepas. Beri masa tambahan pada hujung minggu, cuti umum atau jika perlu melalui pemeriksaan bagasi dan dokumen.',
+        a: "Langkawi Ferry Line meminta penumpang berada di terminal sekurang-kurangnya 60 minit sebelum berlepas. Datang lebih awal jika perlu pemeriksaan atau pada hari sibuk; ikut arahan tiket anda.",
       },
       {
         q: 'Ada tempat letak kereta berhampiran terminal?',
@@ -200,7 +203,7 @@ const ms = {
       },
       {
         q: 'Bilakah waktu terbaik untuk singgah jika bukan menaiki feri?',
-        a: 'Awal pagi atau lewat petang biasanya lebih selesa untuk berjalan di kawasan waterfront dan mengambil gambar. Cahaya juga lebih lembut berbanding tengah hari.',
+        a: "Pilih waktu yang nyaman dalam waktu akses yang dibenarkan. Semak keadaan cuaca dan waktu akses semasa; lawatan santai tidak memberi akses ke kawasan berlepas terkawal.",
       },
       {
         q: 'Berapa lama patut diperuntukkan?',
@@ -212,7 +215,7 @@ const ms = {
       },
       {
         q: 'Berapa lama perjalanan feri dari tanah besar ke Jeti Kuah?',
-        a: 'Sebagai anggaran lazim, perjalanan dari Kuala Perlis mengambil masa sekitar 3 jam manakala dari Kuala Kedah sekitar 1 jam 45 minit. Tempoh sebenar bergantung pada laluan, operator, cuaca dan keadaan laut, jadi semak jadual semasa sebelum merancang.',
+        a: "Naturally Langkawi menerbitkan anggaran 1 jam 15 minit dari Kuala Perlis dan 1 jam 45 minit dari Kuala Kedah. Ini rujukan perancangan, bukan tempoh yang dijamin; sahkan pelayaran pilihan dengan operator.",
       },
     ],
   },
@@ -228,7 +231,7 @@ const ms = {
       'Laman ini ialah panduan bebas dan bukan laman rasmi Jeti Kuah, mana-mana pengendali feri atau LADA.',
     credits:
       'Kredit foto tempatan: Marufish (CC BY-SA 2.0), Zamwan (CC BY-SA 4.0), Bernard Spragg NZ (CC0), Hzh (CC BY-SA 4.0), Olga Oslina (CC BY 2.0) melalui Wikimedia Commons.',
-    ratingNote: 'Maklumat penilaian dan waktu rujukan berasal daripada paparan Google Maps dan boleh berubah.',
+    ratingNote: "Google Maps: 4.3/5 daripada 8,501 ulasan, disemak 2026-10-19. Rekod semakan ini bukan data langsung.",
   },
 };
 
@@ -236,14 +239,14 @@ export type Copy = typeof ms;
 
 const en: Copy = {
   meta: {
-    title: 'Kuah Jetty Langkawi — Travel Guide',
+    title: "Kuah Jetty Langkawi: Ferries, Tickets, Check-in & Map",
     description:
-      'Complete Kuah Jetty Langkawi guide: ferry schedule to Kuala Perlis & Kuala Kedah, ticket prices, parking, plus nearby attractions like Eagle Square and local food.',
-    ogTitle: 'Kuah Jetty Langkawi — Travel Guide',
+      "Plan Kuah Jetty Langkawi: Kuala Perlis/Kuala Kedah ferry checks, tickets, 60-minute check-in guidance, parking and directions. Distinguish Kuah from Telaga Terminal.",
+    ogTitle: "Kuah Jetty Langkawi: Ferries, Tickets, Check-in & Map",
     ogDescription:
-      'A practical guide to Kuah Jetty: ferry schedules, fares, parking, food and attractions around Kuah’s sea gateway.',
-    twitterTitle: 'Kuah Jetty Langkawi — Travel Guide',
-    twitterDescription: 'Ferry schedule, tickets, parking, food and attractions around Kuah Jetty.',
+      "Plan Kuah Jetty Langkawi: Kuala Perlis/Kuala Kedah ferry checks, tickets, 60-minute check-in guidance, parking and directions. Distinguish Kuah from Telaga Terminal.",
+    twitterTitle: "Kuah Jetty Langkawi: Ferries, Tickets, Check-in & Map",
+    twitterDescription: "Plan Kuah Jetty Langkawi: Kuala Perlis/Kuala Kedah ferry checks, tickets, 60-minute check-in guidance, parking and directions. Distinguish Kuah from Telaga Terminal.",
   },
   header: {
     skipLink: 'Skip to content',
@@ -251,7 +254,10 @@ const en: Copy = {
     navLabel: 'Main navigation',
     langLabel: 'Choose language',
     nav: [
-      { href: '#panduan', label: 'Guide' },
+      {
+  "href": "#feri",
+  "label": "Ferries & tickets"
+},
       { href: '#makan', label: 'Food' },
       { href: '#sekitar', label: 'Nearby' },
       { href: '#faq', label: 'FAQ' },
@@ -259,16 +265,16 @@ const en: Copy = {
   },
   hero: {
     eyebrow: 'Langkawi’s sea gateway',
-    h1a: 'Kuah',
-    h1b: 'Jetty.',
+    h1a: "Kuah Jetty",
+    h1b: "Langkawi.",
     lead: 'Where ferry, town and Langkawi’s icons meet — a practical starting point to arrive, depart or enjoy the Kuah waterfront before continuing your journey.',
     imageAlt: 'Kuah waterfront with the jetty and the Langkawi sea',
-    ctaPrimary: 'View map',
+    ctaPrimary: "Plan your ferry journey",
     ctaSecondary: 'Open Google Maps ↗',
   },
   stats: [
-    { label: 'Reference rating', value: '4.3 / 5', note: 'Google Maps · may change' },
-    { label: 'Reference hours', value: '08:00–18:00', note: 'Daily · check ferry schedule' },
+    { label: 'Reference rating', value: '4.3 / 5', note: "Google Maps · 8,501 reviews · 2026-10-19" },
+    { label: 'Reference hours', value: '08:00–18:00', note: "Map listing · not a ferry timetable" },
     { label: 'Public area access', value: 'Free', note: 'Ticket needed for ferry travel' },
     { label: 'Location', value: 'Kuah, Langkawi', note: '07000 Langkawi, Kedah, Malaysia' },
   ],
@@ -280,7 +286,7 @@ const en: Copy = {
     wideCard: {
       kicker: 'If taking the ferry',
       title: 'Arrive at least 60 minutes early.',
-      text: 'Allow time for check-in, inspections, finding your departure gate and passenger movement. On weekends or holidays, arriving earlier is the more comfortable option.',
+      text: "Langkawi Ferry Line asks passengers to be inside the terminal at least 60 minutes before departure. Allow extra time for checks or busy dates and follow your ticket instructions.",
       badge: '60',
     },
     cards: [
@@ -333,7 +339,7 @@ const en: Copy = {
     intro:
       'The jetty sits beside the waterfront, Jetty Point and the Eagle Square landmark — easy to combine into one cluster of stops.',
     addressLabel: 'Address',
-    address: 'Straits Court Condominium, Kuah, 07000 Langkawi, Kedah, Malaysia',
+    address: "Kompleks Jetty Point, Kuah, 07000 Langkawi, Kedah, Malaysia",
     mapTitle: 'Map of Kuah Jetty, Langkawi',
   },
   food: {
@@ -414,7 +420,7 @@ const en: Copy = {
       },
       {
         q: 'How early should I arrive before my ferry departs?',
-        a: 'As a safe guide, arrive at least 60 minutes before departure. Allow extra time on weekends, public holidays or if you need to go through baggage and document checks.',
+        a: "Langkawi Ferry Line asks passengers to be inside the terminal at least 60 minutes before departure. Allow extra time for checks or busy dates and follow your ticket instructions.",
       },
       {
         q: 'Is there parking near the terminal?',
@@ -422,7 +428,7 @@ const en: Copy = {
       },
       {
         q: 'When is the best time to visit if I am not taking a ferry?',
-        a: 'Early morning or late afternoon is usually more comfortable for walking the waterfront and taking photos. The light is also softer than at midday.',
+        a: "Choose a comfortable time within permitted access hours. Check current access and weather; a sightseeing visit does not grant entry to controlled departure areas.",
       },
       {
         q: 'How long should I allow?',
@@ -434,7 +440,7 @@ const en: Copy = {
       },
       {
         q: 'How long is the ferry ride from the mainland to Kuah Jetty?',
-        a: 'As a rough guide, the crossing takes about 3 hours from Kuala Perlis and about 1 hour 45 minutes from Kuala Kedah. Actual duration depends on the route, operator, weather and sea conditions, so check the current schedule before planning.',
+        a: "Naturally Langkawi publishes estimates of 1 hour 15 minutes from Kuala Perlis and 1 hour 45 minutes from Kuala Kedah. Treat these as planning references, not guaranteed durations; confirm your selected sailing with the operator.",
       },
     ],
   },
@@ -450,19 +456,19 @@ const en: Copy = {
       'This site is an independent guide and is not the official site of Kuah Jetty, any ferry operator or LADA.',
     credits:
       'Local photo credits: Marufish (CC BY-SA 2.0), Zamwan (CC BY-SA 4.0), Bernard Spragg NZ (CC0), Hzh (CC BY-SA 4.0), Olga Oslina (CC BY 2.0) via Wikimedia Commons.',
-    ratingNote: 'Rating and reference hours come from Google Maps listings and may change.',
+    ratingNote: "Google Maps: 4.3/5 from 8,501 reviews, checked 2026-10-19. This dated snapshot is not a live feed.",
   },
 };
 
 const zh: Copy = {
   meta: {
-    title: '瓜鎮碼頭 蘭卡威 旅遊指南',
+    title: "蘭卡威瓜鎮碼頭 Kuah Jetty｜渡輪、船票、報到與地圖",
     description:
-      '蘭卡威瓜鎮碼頭完整指南：往返玻璃市港口與吉打港口的渡輪班次與船票價格、停車資訊，以及巨鷹廣場等周邊景點與在地美食推薦。',
-    ogTitle: '瓜鎮碼頭 蘭卡威 旅遊指南',
-    ogDescription: '瓜鎮碼頭實用指南：渡輪班次、票價、停車、美食與海濱周邊景點。',
-    twitterTitle: '瓜鎮碼頭 蘭卡威 旅遊指南',
-    twitterDescription: '渡輪班次、船票、停車、美食與瓜鎮碼頭周邊景點。',
+      "規劃蘭卡威瓜鎮碼頭：查詢玻璃市港及吉打港渡輪、船票、提前60分鐘報到、停車與交通，並分清Kuah與Telaga兩個碼頭。",
+    ogTitle: "蘭卡威瓜鎮碼頭 Kuah Jetty｜渡輪、船票、報到與地圖",
+    ogDescription: "規劃蘭卡威瓜鎮碼頭：查詢玻璃市港及吉打港渡輪、船票、提前60分鐘報到、停車與交通，並分清Kuah與Telaga兩個碼頭。",
+    twitterTitle: "蘭卡威瓜鎮碼頭 Kuah Jetty｜渡輪、船票、報到與地圖",
+    twitterDescription: "規劃蘭卡威瓜鎮碼頭：查詢玻璃市港及吉打港渡輪、船票、提前60分鐘報到、停車與交通，並分清Kuah與Telaga兩個碼頭。",
   },
   header: {
     skipLink: '跳至主要內容',
@@ -470,7 +476,10 @@ const zh: Copy = {
     navLabel: '主導覽',
     langLabel: '選擇語言',
     nav: [
-      { href: '#panduan', label: '指南' },
+      {
+  "href": "#feri",
+  "label": "渡輪與船票"
+},
       { href: '#makan', label: '美食' },
       { href: '#sekitar', label: '周邊' },
       { href: '#faq', label: '常見問題' },
@@ -478,16 +487,16 @@ const zh: Copy = {
   },
   hero: {
     eyebrow: '蘭卡威的海上門戶',
-    h1a: '瓜鎮',
-    h1b: '碼頭',
+    h1a: "瓜鎮碼頭",
+    h1b: "蘭卡威",
     lead: '渡輪、市鎮與蘭卡威地標在此交會——無論抵達、出發，或是在繼續旅程前漫步瓜鎮海濱，這裡都是最實用的起點。',
     imageAlt: '瓜鎮海濱與碼頭及蘭卡威海景',
-    ctaPrimary: '查看地圖',
+    ctaPrimary: "規劃渡輪行程",
     ctaSecondary: '開啟 Google Maps ↗',
   },
   stats: [
-    { label: '參考評分', value: '4.3 / 5', note: 'Google Maps · 可能變動' },
-    { label: '參考時間', value: '08:00–18:00', note: '每天 · 渡輪班次請另行確認' },
+    { label: '參考評分', value: '4.3 / 5', note: "Google Maps · 8,501則評價 · 2026-10-19" },
+    { label: '參考時間', value: '08:00–18:00', note: "地圖條目時間，並非船班時刻表" },
     { label: '公共區域入場', value: '免費', note: '乘搭渡輪需另行購票' },
     { label: '位置', value: '瓜鎮，蘭卡威', note: '07000 Langkawi, Kedah, 馬來西亞' },
   ],
@@ -499,7 +508,7 @@ const zh: Copy = {
     wideCard: {
       kicker: '若要乘搭渡輪',
       title: '至少提前 60 分鐘抵達。',
-      text: '預留辦理登船、安全檢查、尋找登船口與人流移動的時間。週末或假日期間，早點抵達會更從容。',
+      text: "Langkawi Ferry Line要求乘客至少於開船前60分鐘進入客運站。繁忙日期或需要檢查時應更早抵達，並遵從實際船票上的指示。",
       badge: '60',
     },
     cards: [
@@ -551,7 +560,7 @@ const zh: Copy = {
     title: '位於瓜鎮市區南端。',
     intro: '碼頭緊鄰海濱、Jetty Point 與巨鷹廣場地標，適合安排成同一區的順遊路線。',
     addressLabel: '地址',
-    address: 'Straits Court Condominium, Kuah, 07000 Langkawi, Kedah, Malaysia',
+    address: "Kompleks Jetty Point, Kuah, 07000 Langkawi, Kedah, Malaysia",
     mapTitle: '蘭卡威瓜鎮碼頭地圖',
   },
   food: {
@@ -630,7 +639,7 @@ const zh: Copy = {
       },
       {
         q: '開船前應提前多久抵達？',
-        a: '保險起見，建議至少提前 60 分鐘抵達。週末、假日或需辦理行李與證件檢查時，請預留更多時間。',
+        a: "Langkawi Ferry Line要求乘客至少於開船前60分鐘進入客運站。繁忙日期或需要檢查時應更早抵達，並遵從實際船票上的指示。",
       },
       {
         q: '碼頭附近有停車場嗎？',
@@ -638,7 +647,7 @@ const zh: Copy = {
       },
       {
         q: '不搭渡輪的話，什麼時候造訪最好？',
-        a: '清晨或傍晚通常較舒適，適合漫步海濱與拍照，光線也比正午柔和。',
+        a: "請在允許通行的時段選擇舒適的時間，並查詢當天氣象與現場開放安排；一般觀光不能進入受管制的候船區。",
       },
       {
         q: '建議安排多久時間？',
@@ -650,7 +659,7 @@ const zh: Copy = {
       },
       {
         q: '從馬來半島搭渡輪到瓜鎮碼頭需要多久？',
-        a: '一般約略參考：從玻璃市港口出發約 3 小時，從吉打港口出發約 1 小時 45 分鐘。實際時間會受航線、營運商、天候與海況影響，規劃行程前請再查詢最新班表。',
+        a: "Naturally Langkawi公布的參考航程為玻璃市港約1小時15分鐘、吉打港約1小時45分鐘。這些是規劃參考，並非保證航程；請另向營運方確認所選班次。",
       },
     ],
   },
@@ -665,7 +674,7 @@ const zh: Copy = {
     about: '本網站為獨立指南，非瓜鎮碼頭、任何渡輪營運商或蘭卡威發展局（LADA）之官方網站。',
     credits:
       '在地照片來源：Marufish（CC BY-SA 2.0）、Zamwan（CC BY-SA 4.0）、Bernard Spragg NZ（CC0）、Hzh（CC BY-SA 4.0）、Olga Oslina（CC BY 2.0），經由 Wikimedia Commons。',
-    ratingNote: '評分與參考時間取自 Google Maps 頁面，可能隨時變動。',
+    ratingNote: "Google Maps評分4.3/5，共8,501則評價，核對日期2026-10-19。這是當次紀錄，並非即時資料。",
   },
 };
 

@@ -134,3 +134,8 @@ body {
   .shell { width: min(100% - 1.25rem, 1180px); }
   .map-frame iframe { min-height: 350px; }
 }
+
+.header-logo img { width: 168px; height: auto; }
+.main-nav { white-space: nowrap; }
+@media(max-width:960px){ .site-header{position:static;background:#052f3c;} .header-row{flex-wrap:wrap;} .main-nav{display:flex;order:3;width:100%;overflow-x:auto;border-radius:12px;} .main-nav a{flex:0 0 auto;} }
+@media(max-width:420px){.header-logo img{width:128px;}.header-row{gap:8px;}.header-logo{padding:6px;}}

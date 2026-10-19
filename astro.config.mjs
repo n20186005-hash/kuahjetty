@@ -15,7 +15,7 @@ const config = {
 };
 
 if (config.site) {
-  config.integrations.push(sitemap());
+  config.integrations.push(sitemap({filter: page => !/\/404(?:\.html|\/)?$/.test(page), serialize(item) { item.links=[{lang:'ms',url:SITE+'/'},{lang:'en',url:SITE+'/en/'},{lang:'zh-Hant',url:SITE+'/zh/'},{lang:'x-default',url:SITE+'/'}]; return item; }}));
 }
 
 export default defineConfig(config);

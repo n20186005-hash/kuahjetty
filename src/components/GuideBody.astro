@@ -1,4 +1,5 @@
 ---
+import FerryChecks from './FerryChecks.astro';
 import { copy, localeMeta, mapsPlaceUrl, mapsEmbedUrl, mapsLink, ferryOperatorUrl, type Locale } from '../data/content';
 
 interface Props {
@@ -29,7 +30,7 @@ const foodPlaces = t.food.places.map((place) => ({ ...place, url: mapsPlaceUrl(p
   <div class="shell relative z-10 flex min-h-[760px] items-end pb-16 pt-36 md:min-h-[820px] md:pb-24">
     <div class="w-full">
       <div class="eyebrow text-[#f1b16f]">{t.hero.eyebrow}</div>
-      <h1 class="mt-5 max-w-4xl text-[clamp(4.4rem,13vw,10rem)] font-black leading-[0.78] tracking-[-0.07em]">
+      <h1 class="mt-5 max-w-4xl text-[clamp(3rem,9vw,6rem)] font-black leading-[0.78] tracking-[-0.07em]">
         {t.hero.h1a}<br /><span class="text-[#f1b16f]">{t.hero.h1b}</span>
       </h1>
       <div class="mt-8 grid gap-6 border-t border-white/25 pt-7 md:grid-cols-[1.45fr_1fr] md:items-end">
@@ -37,7 +38,7 @@ const foodPlaces = t.food.places.map((place) => ({ ...place, url: mapsPlaceUrl(p
           {t.hero.lead}
         </p>
         <div class="flex flex-wrap gap-3 md:justify-end">
-          <a href="#peta" class="rounded-full bg-[#d88a45] px-5 py-3 text-sm font-black text-white shadow-lg shadow-black/15 transition hover:-translate-y-0.5 hover:bg-[#c77736]">{t.hero.ctaPrimary}</a>
+          <a href="#feri" class="rounded-full bg-[#d88a45] px-5 py-3 text-sm font-black text-white shadow-lg shadow-black/15 transition hover:-translate-y-0.5 hover:bg-[#c77736]">{t.hero.ctaPrimary}</a>
           <a href={mapsLink} target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/35 bg-white/10 px-5 py-3 text-sm font-black text-white backdrop-blur transition hover:bg-white/18">{t.hero.ctaSecondary}</a>
         </div>
       </div>
@@ -56,6 +57,8 @@ const foodPlaces = t.food.places.map((place) => ({ ...place, url: mapsPlaceUrl(p
     ))}
   </div>
 </section>
+
+<FerryChecks locale={locale} />
 
 <section class="shell py-24 md:py-32" id="panduan">
   <div class="grid gap-12 md:grid-cols-[0.82fr_1.18fr] md:items-start">
