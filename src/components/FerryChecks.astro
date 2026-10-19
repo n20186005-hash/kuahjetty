@@ -1,0 +1,16 @@
+---
+import { checks } from '../data/checks';
+import { ferryOperatorUrl, mapsLink, type Locale } from '../data/content';
+interface Props {locale: Locale;}
+const c=checks[Astro.props.locale];
+---
+<section id="feri" class="shell py-16">
+ <p class="eyebrow text-[#b76531]">{c.checked}</p><h2 class="section-title text-[#073b4c]">{c.heading}</h2><p class="section-copy">{c.intro}</p>
+ <div class="mt-8 grid gap-5 md:grid-cols-2">
+  <article class="card p-7"><h3 class="text-2xl font-black text-[#073b4c]">Kuala Perlis / Kuala Kedah ↔ Kuah</h3><p class="mt-4 leading-7">{c.durationText}</p><a class="inline-block mt-4 font-bold underline" href="https://naturallylangkawi.my/getting-here-2/" target="_blank" rel="noopener noreferrer">Naturally Langkawi</a></article>
+  <article class="card p-7"><h3 class="text-2xl font-black text-[#073b4c]">{c.timingLabel}: {c.boarding}</h3><p class="mt-4 leading-7">{c.checkin}</p><p class="mt-4">{c.phoneLabel}: <a href="tel:+6049665889" class="font-bold underline">{c.contact}</a></p></article>
+  <article class="card p-7"><h3 class="text-2xl font-black text-[#073b4c]">{c.fareTitle}</h3><p class="mt-4 leading-7">{c.fare}</p><a class="inline-block mt-4 font-bold underline" href={ferryOperatorUrl} target="_blank" rel="noopener noreferrer">{c.booking} · Langkawi Ferry Line</a></article>
+  <article class="card p-7"><h3 class="text-2xl font-black text-[#073b4c]">{c.telagaTitle}</h3><p class="mt-4 leading-7">{c.telaga}</p><a class="inline-block mt-4 font-bold underline" href="https://telagaterminal.com/useful-information.html" target="_blank" rel="noopener noreferrer">Telaga Terminal</a></article>
+ </div>
+ <p class="mt-6 leading-7">{c.hoursText} <a href={mapsLink} class="font-bold underline" target="_blank" rel="noopener noreferrer">Google Maps</a></p>
+</section>

@@ -14,7 +14,7 @@ const ogImage = SITE + '/images/kuah-waterfront.webp';
 
 const attractionSchema = {
   '@context': 'https://schema.org',
-  '@type': ['TouristAttraction', 'LocalBusiness'],
+  '@type': ['TouristAttraction', 'Place'],
   name: 'Jeti Kuah (Kuah Jetty)',
   alternateName: 'Kuah Jetty · 瓜鎮碼頭',
   description:
@@ -31,20 +31,6 @@ const attractionSchema = {
     '@type': 'GeoCoordinates',
     latitude: 6.3060687,
     longitude: 99.85149,
-  },
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '08:00',
-      closes: '18:00',
-    },
-  ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: 4.3,
-    ratingCount: 8370,
-    bestRating: 5,
   },
   url: canonicalUrl,
   inLanguage: meta.htmlLang,
@@ -104,7 +90,7 @@ const faqSchema = {
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HXM22WWPKP"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(){window.dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-HXM22WWPKP');
     </script>
@@ -114,12 +100,12 @@ const faqSchema = {
   <body>
     <a class="skip-link" href="#kandungan">{t.header.skipLink}</a>
 
-    <header class="absolute inset-x-0 top-0 z-30">
-      <div class="shell flex items-center justify-between gap-3 py-5">
-        <a href="#atas" aria-label={t.header.logoAlt} class="inline-flex shrink-0 rounded-2xl bg-white/95 p-2 shadow-lg shadow-black/10 backdrop-blur">
+    <header class="site-header absolute inset-x-0 top-0 z-30">
+      <div class="header-row shell flex items-center justify-between gap-3 py-5">
+        <a href="#atas" aria-label={t.header.logoAlt} class="header-logo inline-flex shrink-0 rounded-2xl bg-white/95 p-2 shadow-lg shadow-black/10 backdrop-blur">
           <img src="/logo.svg" width="210" height="52" alt={t.header.logoAlt} />
         </a>
-        <nav aria-label={t.header.navLabel} class="hidden items-center gap-1 rounded-full border border-white/20 bg-[#052f3c]/70 p-1 text-sm font-bold text-white backdrop-blur md:flex">
+        <nav aria-label={t.header.navLabel} class="main-nav hidden items-center gap-1 rounded-full border border-white/20 bg-[#052f3c]/70 p-1 text-sm font-bold text-white backdrop-blur md:flex">
           {t.header.nav.map((item) => (
             <a class="rounded-full px-4 py-2 hover:bg-white/10" href={item.href}>{item.label}</a>
           ))}
